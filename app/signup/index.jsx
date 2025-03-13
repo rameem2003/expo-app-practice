@@ -17,8 +17,8 @@ const index = () => {
         paddingVertical: 19,
       }}
     >
-      <Text style={{ fontSize: 36, fontWeight: "bold" }}>Welcome</Text>
-      <Text style={{ fontSize: 36, fontWeight: "bold" }}>Back</Text>
+      <Text style={{ fontSize: 36, fontWeight: "bold" }}>Create an </Text>
+      <Text style={{ fontSize: 36, fontWeight: "bold" }}>Account</Text>
       {/* <Link href={"/(tabs)"}>Go</Link> */}
 
       <View style={{ marginTop: 36 }}>
@@ -73,9 +73,32 @@ const index = () => {
             placeholder="Password"
           />
         </View>
-        <Text style={{ textAlign: "right", marginTop: 10, color: "#F83758" }}>
-          Forgot Password?
-        </Text>
+        <View style={{ position: "relative", marginTop: 31 }}>
+          <Feather
+            style={{
+              position: "absolute",
+              top: "50%",
+              zIndex: 10,
+              left: 10,
+              transform: "translateY(-15%)",
+            }}
+            name="lock"
+            size={24}
+            color="black"
+          />
+          <TextInput
+            style={{
+              padding: 20,
+              borderColor: "#A8A8A9",
+              borderWidth: 1,
+              borderRadius: 10,
+              backgroundColor: "#F3F3F3",
+              paddingLeft: 38,
+            }}
+            secureTextEntry={true}
+            placeholder="Password"
+          />
+        </View>
 
         <TouchableOpacity
           style={{
@@ -93,18 +116,18 @@ const index = () => {
               fontWeight: "semibold",
             }}
           >
-            Login
+            Create Account
           </Text>
         </TouchableOpacity>
 
         <View style={{ marginTop: 194 }}>
           <Text style={{ textAlign: "center", fontSize: 14 }}>
-            Create An Account{" "}
+            I Already Have an Account{" "}
             <Link
-              href={"/signup"}
+              href={"/"}
               style={{ fontWeight: "semibold", color: "#F83758" }}
             >
-              Sign Up
+              Login
             </Link>
           </Text>
         </View>

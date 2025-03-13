@@ -1,9 +1,12 @@
-import { Link, Redirect } from "expo-router";
+import { Link, Redirect, router } from "expo-router";
 import { useEffect } from "react";
 import { Text, TextInput, TouchableOpacity, View } from "react-native";
 import Feather from "@expo/vector-icons/Feather";
 
 export default function Index() {
+  const goHome = () => {
+    router.replace("/(tabs)");
+  };
   return (
     <View
       style={{
@@ -76,6 +79,7 @@ export default function Index() {
         </Text>
 
         <TouchableOpacity
+          onPress={goHome}
           style={{
             padding: 15,
             backgroundColor: "#F83758",
